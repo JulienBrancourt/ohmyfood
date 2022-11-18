@@ -1,0 +1,19 @@
+footer {
+    width: 100%;
+    padding: 20px 15px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+    ul li {
+        list-style: none;
+        padding: 5px 0;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

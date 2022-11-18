@@ -4,6 +4,26 @@
   padding: 0;
 }
 
+footer {
+  width: 100%;
+  padding: 20px 15px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+footer ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -62,7 +82,7 @@ input[type=search] {
   text-align: center;
   background-color: rgb(247, 247, 247);
   justify-content: flex-start;
-  padding: 25px 0;
+  padding: 25px 5px;
   height: 200px;
   justify-content: space-around;
 }
@@ -266,7 +286,6 @@ footer a {
 
 .orbit-spinner .orbit {
   position: absolute;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
   border-radius: 50%;

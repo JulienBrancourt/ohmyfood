@@ -5,6 +5,9 @@
 }
 
 @import "./variables";
+@import "./placeholders";
+@import "./mixins";
+@import "./layouts";
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -66,7 +69,7 @@ input::placeholder {
     text-align: center;
     background-color: $couleur-bg;
     justify-content: flex-start;
-    padding: 25px 0;
+    padding: 25px 5px;
     height: 200px;
     justify-content: space-around;
     a {
@@ -274,18 +277,7 @@ footer {
     display:flex;
     justify-content:center;
     align-items:center;
-    //backdrop-filter: blur(5px);
-    //-webkit-backdrop-filter: blur(5px);
-    //z-index: 999;
-    //animation: orbit-spinner-orbit-one-animation 1200ms linear infinite,orbit-spinner-orbit-two-animation 1200ms linear infinite,orbit-spinner-orbit-three-animation 1200ms linear infinite;
-    //animation-fill-mode: forwards;
-    
-
 }
-
-//.orbit-spinner, .orbit-spinner * {
-//    box-sizing: border-box;
-//  }
 
   .orbit-spinner {
     height: 100px;
@@ -297,7 +289,6 @@ footer {
 
   .orbit-spinner .orbit {
     position: absolute;
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
     border-radius: 50%;
