@@ -246,38 +246,19 @@ input::placeholder {
       transform: scale(1);
   }
 
-footer {
-    width: 100%;
-    padding: 20px 15px;
-    background-color: rgb(53, 53, 53);
-    color: white;
-    h2 {
-        font-family: 'Shrikhand', cursive;
-        font-weight: 300;
-        padding-bottom: 20px;
-    }
-    ul li {
-        list-style: none;
-        padding: 5px 0;
-    }
-    a {
-        text-decoration: none;
-        color: white;
-    }
-}
 
 .load {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
     display:flex;
     justify-content:center;
     align-items:center;
+    z-index: 5;
 }
+
+
+  
 
   .orbit-spinner {
     height: 100px;
@@ -369,7 +350,7 @@ footer {
     }
   }
 
-  header, main, footer {
+/*  header, main, footer {
     animation: opacity 3s 0s ease-in forwards;
   }
 
@@ -379,6 +360,28 @@ footer {
     }
     to {
       opacity: 1;
+    }
+  }*/
+
+  .fond-loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    //height: 500px;
+    //width: 500px;
+    z-index: 4;
+    
+    animation: flou 3s 0s ease-in forwards;
+  }
+
+  @keyframes flou {
+    from {
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+    to {
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
     }
   }
 

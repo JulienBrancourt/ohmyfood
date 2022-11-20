@@ -247,26 +247,6 @@ input[type=search] {
   transform: scale(1);
 }
 
-footer {
-  width: 100%;
-  padding: 20px 15px;
-  background-color: rgb(53, 53, 53);
-  color: white;
-}
-footer h2 {
-  font-family: "Shrikhand", cursive;
-  font-weight: 300;
-  padding-bottom: 20px;
-}
-footer ul li {
-  list-style: none;
-  padding: 5px 0;
-}
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
 .load {
   position: fixed;
   height: 100vh;
@@ -274,6 +254,7 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
 .orbit-spinner {
@@ -363,16 +344,34 @@ footer a {
     opacity: 0;
   }
 }
-header, main, footer {
-  animation: opacity 3s 0s ease-in forwards;
+/*  header, main, footer {
+    animation: opacity 3s 0s ease-in forwards;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }*/
+.fond-loader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  animation: flou 3s 0s ease-in forwards;
 }
 
-@keyframes opacity {
+@keyframes flou {
   from {
-    opacity: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   to {
-    opacity: 1;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
   }
 }
 
