@@ -270,7 +270,7 @@ input[type=search] {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 8;
+  z-index: 3;
   animation: disparition 0s linear 3s 1 forwards;
 }
 
@@ -279,7 +279,7 @@ input[type=search] {
   width: 100px;
   border-radius: 50%;
   perspective: 800px;
-  z-index: 5;
+  z-index: 3;
 }
 
 .orbit-spinner .orbit {
@@ -361,7 +361,12 @@ input[type=search] {
     opacity: 0;
   }
 }
-/*@keyframes opacity {
+/*header, main, footer {
+  //animation: opacity 3s 0s ease-in forwards;
+  //animation: flou 3s 0s ease-in forwards;
+}
+
+@keyframes opacity {
   from {
     opacity: 0;
   }
@@ -373,29 +378,30 @@ input[type=search] {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  z-index: 5;
+  z-index: 2;
   animation: flou 3s 0s ease-in forwards;
 }
 
 @keyframes flou {
   0% {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   99% {
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    transform: translateX(0vw);
   }
   100% {
-    display: none;
+    transform: translateX(-100vw);
   }
 }
 @keyframes disparition {
   from {
-    display: flex;
+    transform: translateX(0vw);
   }
   to {
-    display: none;
+    transform: translateX(-100vw);
   }
 }
 

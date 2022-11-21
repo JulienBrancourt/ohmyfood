@@ -19,8 +19,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 .position1 {
@@ -142,6 +140,9 @@ h2 {
     width: 100%;
     //width: 95%; pour grands formats
     margin: auto;
+    @include responsive('tablette') {
+      width: 95%;
+    }
 
     .fa-solid {
         position : absolute;
@@ -170,6 +171,14 @@ h2 {
       }
 }
 
+.menu {
+  @include responsive('bureau') {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -178,10 +187,16 @@ section {
     margin: auto;
     background-color: $couleur-bg;
     padding-left: 10px;
+    @include responsive('tablette') {
+      width: 95%;
+    }
 }
 h3 {
     position: relative;
     padding-bottom: 15px;
+    @include responsive('tablette') {
+      text-align: center;
+    }
     &::after {
     content: '';
     display: inline-block;
@@ -191,11 +206,16 @@ h3 {
     position: absolute;
     top: 25px;
     left : 0px;
+      @include responsive('tablette') {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 }
 
 .btn-avec-check {
     width: 90%;
+    max-width: 300px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -214,6 +234,12 @@ h3 {
     padding: 5px 15px;
     border-radius: 10px;
     background-color: white;
+    &__titre {
+      min-width: 0;
+      h4 {
+      @extend %texte_tronqué;
+      }
+    }
     &__detail {
       display: flex;
       justify-content: space-between;
@@ -222,9 +248,7 @@ h3 {
       &__accompagnement {
         min-width: 0;
         p {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          @extend %texte_tronqué;
         }
       }
     }

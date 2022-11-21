@@ -4,3 +4,8 @@ $couleur-tertiaire : #99E2D0;
 $couleur-localisation : rgb(234, 234, 234);
 $couleur-bg : rgb(247, 247, 247);
 
+$breakpoints: (
+    'bureau': ( min-width: 1024px),
+    'tablette': ( min-width: 768px),
+);
+
