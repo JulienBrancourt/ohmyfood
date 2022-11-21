@@ -33,6 +33,17 @@ footer {
         font-family: 'Shrikhand', cursive;
         font-weight: 300;
         padding-bottom: 20px;
+        @include responsive ('tablette') {
+            text-align: center;
+        }
+    }
+    ul {
+        @include responsive('tablette') {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+          }
+
     }
     ul li {
         list-style: none;

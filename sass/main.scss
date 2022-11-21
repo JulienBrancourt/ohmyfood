@@ -84,12 +84,22 @@ input::placeholder {
     flex-direction: column;
     padding: 15px 5px;
     margin-left: 15px;
+    flex-wrap: wrap;
+    @include responsive('tablette') {
+      align-items: center;
+    }
+    @include responsive('bureau') {
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: 1400px;
+      margin: auto;
+    }
     &__bouton {
         display: flex;
         cursor: pointer;
         align-items: center;
         background: $couleur-bg;
-        width: 350px;
+        width: 310px;
         height: auto;
         padding: 20px 0px;
         border-radius: 20px;
@@ -133,6 +143,10 @@ input::placeholder {
 
 .etapes h2 {
     padding-bottom: 10px;
+    @include responsive('bureau') {
+      flex-basis: 100%;
+      text-align: center;
+    }
 }
 
 #restaurants {
@@ -142,10 +156,16 @@ input::placeholder {
     align-items: center;
     // justify-content: center;
     background-color: $couleur-bg;
+
     h2 {
         align-self: flex-start;
         padding-bottom: 15px;
         margin-left: 15px;
+        @include responsive('tablette') {
+          align-self: center;
+          flex-basis: 100%;
+        }
+        
     }
 }
 
@@ -153,6 +173,11 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include responsive('bureau') {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 }
 
 .carte-resto {

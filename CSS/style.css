@@ -41,6 +41,18 @@ footer h2 {
   font-weight: 300;
   padding-bottom: 20px;
 }
+@media (min-width: 600px) {
+  footer h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 600px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 footer ul li {
   list-style: none;
   padding: 5px 0;
@@ -123,13 +135,27 @@ input[type=search] {
   flex-direction: column;
   padding: 15px 5px;
   margin-left: 15px;
+  flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .etapes {
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .etapes {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 .etapes__bouton {
   display: flex;
   cursor: pointer;
   align-items: center;
   background: rgb(247, 247, 247);
-  width: 350px;
+  width: 310px;
   height: auto;
   padding: 20px 0px;
   border-radius: 20px;
@@ -167,6 +193,12 @@ input[type=search] {
 .etapes h2 {
   padding-bottom: 10px;
 }
+@media (min-width: 1024px) {
+  .etapes h2 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
 
 #restaurants {
   padding: 15px 5px;
@@ -180,11 +212,24 @@ input[type=search] {
   padding-bottom: 15px;
   margin-left: 15px;
 }
+@media (min-width: 600px) {
+  #restaurants h2 {
+    align-self: center;
+    flex-basis: 100%;
+  }
+}
 
 .restaurants__bloc {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .restaurants__bloc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .carte-resto {
