@@ -22,87 +22,61 @@ html {
 }
 
 .position1 {
-  animation: apparition 0.5s linear 0s forwards;
+  animation: apparition 0.5s linear 0.5s forwards;
   //animation: name duration timing-function delay iteration-count direction fill-mode;
-  transform-origin: left;
+
 }
 
 .position2 {
-  animation: apparition 0.6s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 0.6s forwards;
+
 }
 
 .position3 {
-  animation: apparition 0.7s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 0.7s forwards;
+
 }
 
 .position4 {
-  animation: apparition 0.8s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 1.0s forwards;
+
 }
 
 .position5 {
-  animation: apparition 0.9s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 1.1s forwards;
+
 }
 
 .position6 {
-  animation: apparition 1s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 1.2s forwards;
+
 }
 
 .position7 {
-  animation: apparition 1.1s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 1.5s forwards;
+
 }
 
 .position8 {
-  animation: apparition 1.2s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 1.6s forwards;
+
 }
 
 .position9 {
-  animation: apparition 0.10s linear 0s forwards;
-  transform-origin: left;
+  animation: apparition 0.5s linear 1.7s forwards;
+
 }
 
 @keyframes apparition {
   from {
-    //opacity: 0;
-    scale: (0);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    //opacity: 1;
-    scale: (1);
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
-
-/*header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    nav {
-        width: 100%;
-        height: 90px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        a {
-            font-size: 40px;
-            color: black;
-            position: absolute;
-            left: 15px;
-        }
-        h1 {
-            font-family: 'Shrikhand', cursive;
-            font-size: 50px;
-            text-align: center;
-        }
-    }
-}*/
 
 main {
     width: 100%;
@@ -121,6 +95,7 @@ main {
         // position: absolute;
         width: 100%;
         margin-top: -50px;
+        
         // padding: 35px;
         
     }
@@ -129,6 +104,9 @@ main {
 h2 {
     font-family: 'Shrikhand', cursive;
     padding-bottom: 30px;
+    @include responsive('bureau') {
+      margin-left: 50px;
+    }
 }
 
 .menu-titre {
@@ -142,6 +120,7 @@ h2 {
     margin: auto;
     @include responsive('tablette') {
       width: 95%;
+      max-width: 1400px;
     }
 
     .fa-solid {
@@ -156,6 +135,9 @@ h2 {
         transition : all ease-in-out 0.5s;
         right: 25px;
         top: 25px;
+        @include responsive('bureau') {
+          margin-right: 50px;
+        }
       }
       
       .fa-regular {
@@ -163,6 +145,9 @@ h2 {
         font-size: 35px;
         right: 25px;
         top: 25px;
+        @include responsive('bureau') {
+          margin-right: 50px;
+        }
       }
       
       .fa-regular:hover +.fa-solid {
@@ -175,6 +160,9 @@ h2 {
   @include responsive('bureau') {
     display: flex;
     flex-direction: row;
+    max-width: 1400px;
+    justify-content: center;
+    margin: auto;
   }
 
 }
@@ -183,12 +171,14 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    //width: 95%; //pour grands formats
     margin: auto;
     background-color: $couleur-bg;
     padding-left: 10px;
     @include responsive('tablette') {
       width: 95%;
+      padding-left: 0;
+
+
     }
 }
 h3 {
@@ -222,6 +212,7 @@ h3 {
     margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
     filter: drop-shadow(2px 2px 4px #86868f);
   }
 

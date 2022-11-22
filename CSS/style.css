@@ -50,12 +50,19 @@ footer h2 {
   footer ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    max-width: 1400px;
+    margin: auto;
   }
 }
 footer ul li {
   list-style: none;
   padding: 5px 0;
+}
+@media (min-width: 600px) {
+  footer ul li {
+    padding: 5px 45px;
+  }
 }
 footer a {
   text-decoration: none;
@@ -160,7 +167,7 @@ input[type=search] {
   padding: 20px 0px;
   border-radius: 20px;
   position: relative;
-  margin-top: 15px;
+  margin: 10px 0;
   filter: drop-shadow(2px 2px 4px #86868f);
 }
 .etapes__bouton .puce {
@@ -229,6 +236,7 @@ input[type=search] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1400px;
   }
 }
 

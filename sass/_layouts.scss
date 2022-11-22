@@ -41,13 +41,18 @@ footer {
         @include responsive('tablette') {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
+            max-width: 1400px;
+            margin: auto;
           }
 
     }
     ul li {
         list-style: none;
         padding: 5px 0;
+        @include responsive('tablette') {
+            padding: 5px 45px;
+        }
     }
     a {
         text-decoration: none;

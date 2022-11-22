@@ -104,7 +104,7 @@ input::placeholder {
         padding: 20px 0px;
         border-radius: 20px;
         position: relative;
-        margin-top: 15px;
+        margin: 10px 0;
         filter: drop-shadow(2px 2px 4px #86868f);
 
         .puce {
@@ -177,6 +177,7 @@ input::placeholder {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      max-width: 1400px;
     }
 }
 
