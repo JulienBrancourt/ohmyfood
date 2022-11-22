@@ -99,6 +99,10 @@ html {
   animation: apparition 0.5s linear 0.7s forwards;
 }
 
+.position3bis {
+  animation: apparition 0.5s linear 0.8s forwards;
+}
+
 .position4 {
   animation: apparition 0.5s linear 1s forwards;
 }
@@ -212,8 +216,8 @@ h2 {
     display: flex;
     flex-direction: row;
     max-width: 1400px;
-    justify-content: center;
-    margin: auto;
+    justify-content: flex-start;
+    margin: 0 auto;
   }
 }
 
@@ -229,6 +233,11 @@ section {
   section {
     width: 95%;
     padding-left: 0;
+  }
+}
+@media (min-width: 1024px) {
+  section {
+    margin: 0 auto;
   }
 }
 
