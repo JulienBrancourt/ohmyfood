@@ -59,3 +59,18 @@ footer {
         color: white;
     }
 }
+
+.bouton_principal {
+    width: auto;
+    height: auto;
+    background: linear-gradient(to top,$couleur-primaire, $couleur-secondaire);
+    box-shadow: 7px 7px 5px #b7b7bd;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 30px;
+    &:hover {
+        background: linear-gradient(to top,lighten($couleur-primaire,5%),lighten($couleur-secondaire,5%));
+        box-shadow: 10px 7px 5px (darken(#b7b7bd,15%));
+    }
+}

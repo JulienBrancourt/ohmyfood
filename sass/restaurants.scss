@@ -286,19 +286,11 @@ h3 {
       margin-top: 5vh;
     }
     a{
-        width: auto;
-        height: auto;
+        
         padding: 15px 45px;
-        background: linear-gradient(to top,$couleur-primaire, $couleur-secondaire);
-        border-radius: 30px;
-        color: white;
-        box-shadow: 10px 7px 5px #86868f;
-        cursor: pointer;
-        text-decoration: none;
-        &:hover {
-            background: linear-gradient(to top,lighten($couleur-primaire,5%),lighten($couleur-secondaire,5%));
-            box-shadow: 10px 7px 5px (darken(#86868f,15%));
-        }
+        
+        
+        
     }
 }
 
