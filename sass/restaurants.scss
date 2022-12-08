@@ -173,9 +173,11 @@ section {
     margin: auto;
     background-color: $couleur-bg;
     padding-left: 10px;
+    padding-right: 10px;
     @include responsive('tablette') {
       width: 95%;
       padding-left: 0;
+      padding-right: 0;
     }
     @include responsive('bureau') {
       margin: 0 auto;
@@ -204,8 +206,8 @@ h3 {
 }
 
 .btn-avec-check {
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 600px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -215,6 +217,12 @@ h3 {
     opacity: 0;
     box-shadow: 2px 2px 4px #86868f;
     border-radius: 10px;
+    @include responsive('bureau') {
+      width: 90%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .choix {
